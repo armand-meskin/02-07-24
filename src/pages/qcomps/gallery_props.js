@@ -1,3 +1,31 @@
+// Replace profs with this component in Gallery()
+function Profile({scientist, size}) {
+  <section className="profile">
+        <h2>Maria Skłodowska-Curie</h2>
+        <img
+          className="avatar"
+          src='https://i.imgur.com/szV5sdGs.jpg'
+          alt={scientist.name}
+          width={70}
+          height={70}
+        />
+        <ul>
+          <li>
+            <b>Profession: </b>
+            {scientist.profession}
+          </li>
+          <li>
+            <b>Awards: 4 </b>
+            (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
+          </li>
+          <li>
+            <b>Discovered: </b>
+            polonium (element)
+          </li>
+        </ul>
+      </section>
+}
+
 export default function Gallery() {
   return (
     <div>
