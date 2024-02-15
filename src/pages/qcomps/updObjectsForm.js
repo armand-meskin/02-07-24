@@ -7,8 +7,13 @@ export default function Scoreboard() {
     score: 10,
   });
 
+  // ...player is spread syntax. It lets react know 
+  // to reuse old properties that are not redefined
   function handlePlusClick() {
-    player.score++;
+    setPlayer({
+      ...player,
+      score: player.score + 1,
+    });
   }
 
   function handleFirstNameChange(e) {
@@ -20,6 +25,7 @@ export default function Scoreboard() {
 
   function handleLastNameChange(e) {
     setPlayer({
+      ...player,
       lastName: e.target.value
     });
   }
